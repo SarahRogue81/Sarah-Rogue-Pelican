@@ -3,25 +3,25 @@
 
 import os
 import sys
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-load_dotenv()  # This loads variables from .env into os.environ
+# load_dotenv()  # This loads variables from .env into os.environ
 
 # uncomment to allow robots to index and follow
 ROBOTS_CONTENT = 'index, follow'
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = os.getenv('SITEURL')
+SITEURL = 'https://sarah-rogue.me'
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_ALL_ATOM = 'feed.xml'
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
+CATEGORY_FEED_ATOM = '{slug}.feed.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-DISQUS = os.getenv('DISQUS')
+# DISQUS = os.getenv('DISQUS')
