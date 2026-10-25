@@ -7,6 +7,7 @@ load_dotenv()  # This loads variables from .env into os.environ
 # CURRENT_YEAR = datetime.now().year
 
 AUTHOR = 'Sarah Rogue'
+AUTHOR_BIO = 'Sarah blogs about everthing tech and gaming - from Android, ChromeOS, Googlebooks, coding, Windows 11, and Linux to gaming, raising her kids, and more. she is a geeky emo girl who loves to share'
 SITENAME = 'Sarah\'s Website'
 
 PATH = 'content'
