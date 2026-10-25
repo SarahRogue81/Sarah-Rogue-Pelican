@@ -5,183 +5,183 @@ xmlns:xhtml="http://www.w3.org/1999/xhtml"
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://www.sarah-rogue.me/</loc>
+<loc>https://sarah-rogue.me/</loc>
 <lastmod>2026-07-12T02:07:09-04:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/about.html</loc>
+<loc>https://sarah-rogue.me/about.html</loc>
 <lastmod>2026-07-11T23:57:29-04:00</lastmod>
 <changefreq>never</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/author/sarah-rogue.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/author/sarah-rogue.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/authors.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/authors.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/blog/</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/happy-new-year/</loc>
+<loc>https://sarah-rogue.me/blog/happy-new-year/</loc>
 <lastmod>2026-01-01T00:00:00-05:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/how-to-configure-your-fish-prompt/</loc>
+<loc>https://sarah-rogue.me/blog/how-to-configure-your-fish-prompt/</loc>
 <lastmod>2025-08-09T00:00:00-04:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/its-christmas-time/</loc>
+<loc>https://sarah-rogue.me/blog/its-christmas-time/</loc>
 <lastmod>2025-12-25T00:00:00-05:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/mask-gangles-song-feat-marissa-lenti/</loc>
+<loc>https://sarah-rogue.me/blog/mask-gangles-song-feat-marissa-lenti/</loc>
 <lastmod>2026-05-17T00:00:00-04:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/using-google-drive-on-arch-linux-kde-plasma/</loc>
+<loc>https://sarah-rogue.me/blog/using-google-drive-on-arch-linux-kde-plasma/</loc>
 <lastmod>2025-09-25T00:00:00-04:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/what-kind-of-halloween-monster-am-i/</loc>
+<loc>https://sarah-rogue.me/blog/what-kind-of-halloween-monster-am-i/</loc>
 <lastmod>2025-09-11T00:00:00-04:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/blog/winboat-for-gnulinux/</loc>
+<loc>https://sarah-rogue.me/blog/winboat-for-gnulinux/</loc>
 <lastmod>2025-09-04T00:00:00-04:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/categories.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/categories.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/category/gnulinux.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/category/gnulinux.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/category/holiday.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/category/holiday.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/category/humour.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/category/humour.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/archlinux.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/archlinux.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/cachyos.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/cachyos.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/dolphin.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/dolphin.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/fedora.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/fedora.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/fish.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/fish.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/kde-plasma.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/kde-plasma.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/the-amazing-digital-circus.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/the-amazing-digital-circus.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/winboat.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/winboat.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tag/windows.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tag/windows.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://www.sarah-rogue.me/tags.html</loc>
-<lastmod>2026-10-25T10:28:22-00:00</lastmod>
+<loc>https://sarah-rogue.me/tags.html</loc>
+<lastmod>2026-10-25T10:30:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
