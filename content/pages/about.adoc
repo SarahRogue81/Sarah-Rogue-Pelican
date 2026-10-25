@@ -1,5 +1,4 @@
 = about me
-
 :layout: page
 :title: about me
 :author: Sarah Rogue
