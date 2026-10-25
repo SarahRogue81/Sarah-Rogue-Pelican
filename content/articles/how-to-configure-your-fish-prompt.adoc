@@ -1,5 +1,4 @@
 = How To Configure Your Fish Prompt
-
 :category: GNU/Linux 
 :date: 2025-08-09
 :imagesdir: /images/how-to-configure-your-fish-prompt

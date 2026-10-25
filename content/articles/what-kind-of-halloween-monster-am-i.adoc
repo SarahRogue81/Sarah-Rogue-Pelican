@@ -1,5 +1,4 @@
 = Monster Profile
-
 :category: humour
 :date: 2025-09-11
 :imagesdir: /images/what-kind-of-halloween-monster-am-i

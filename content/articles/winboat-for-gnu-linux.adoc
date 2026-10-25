@@ -1,5 +1,4 @@
 = WinBoat for GNU/Linux
-
 :category: GNU/Linux
 :date: 2025-09-04
 :imagesdir: /images/winboat-for-gnu-linux

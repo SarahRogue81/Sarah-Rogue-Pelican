@@ -1,5 +1,4 @@
 = welcome to my new website
-
 :layout: default
 :title: welcome to my website
 :author: Sarah Rogue

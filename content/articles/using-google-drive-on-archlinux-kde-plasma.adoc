@@ -1,5 +1,4 @@
 = Using Google Drive on Arch Linux - KDE Plasma
-
 :category: GNU/Linux
 :date: 2025-09-25
 :imagesdir: /images/using-google-drive-on-archlinux-kde-plasma
