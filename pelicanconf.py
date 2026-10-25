@@ -8,6 +8,7 @@ load_dotenv()  # This loads variables from .env into os.environ
 
 AUTHOR = 'Sarah Rogue'
 AUTHOR_BIO = 'Sarah blogs about everthing tech and gaming - from Android, ChromeOS, Googlebooks, coding, Windows 11, and Linux to gaming, raising her kids, and more. she is a geeky emo girl who loves to share'
+AUTHOR_EMAIL = os.getenv('AUTHOR_EMAIL')
 SITENAME = 'Sarah\'s Website'
 
 PATH = 'content'
@@ -54,6 +55,7 @@ FONT_AWESOME = os.getenv('FONT_AWESOME')
 OVERRIDE_CSS = 'styles.css'
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['asciidoc_reader', 'sitemap']
+PROGRAMMABLE_SEARCH_ENGINE = os.getenv('PROGRAMMABLE_SEARCH_ENGINE')
 STATIC_PATHS = ['images', 'src', 'robots.txt', 'css']
 # SUMMARY_MAX_PARAGRAPHS = 1
 THEME = 'themes/will_i_am'
