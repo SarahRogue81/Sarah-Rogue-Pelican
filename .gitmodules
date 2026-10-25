@@ -1,12 +1,12 @@
-[submodule "replit/WhatsTheScoop"]
+[submodule "theme/WhatsTheScoop"]
 	path = themes/WhatsTheScoop
 	url = git@github.com:SarahRogue81/WhatsTheScoop.git
-[submodule "replit/WhatsTheScoop.wiki"]
-	path = themes/WhatsTheScoop.wiki
-	url = git@github.com:SarahRogue81/WhatsTheScoop.wiki.git
-[submodule "replit/asciidoc_reader"]
+[submodule "plugin/asciidoc_reader"]
 	path = plugins/asciidoc_reader
 	url = git@github.com:SarahRogue81/asciidoc_reader.git
-[submodule "replit/will_i_am"]
+[submodule "theme/will_i_am"]
 	path = themes/will_i_am
 	url = git@github.com:SarahRogue81/will_i_am.git
+[submodule "wiki/WhatsTheScoop.wiki"]
+	path = themes/WhatsTheScoop.wiki
+	url = git@github.com:SarahRogue81/WhatsTheScoop.wiki.git
