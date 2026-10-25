@@ -1,289 +1,81 @@
 <!doctype html>
-<html lang="en-gb" data-theme="light">
+<html lang="en-gb">
 <head>
-    <link rel="preconnect" href="https://sarah-rogue.me"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://sarah-rogue.me" crossorigin/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link rel="canonical" href="https://sarah-rogue.me/2025/how-to-configure-your-fish-prompt/"/>
     <meta charset="utf-8"/>
-    <base href="https://sarah-rogue.me/"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="color-scheme" content="dark"/>
     <meta name="robots" content="index, follow"/>
-    <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@SarahRogue81"/>
-        <meta name="twitter:creator" content="@SarahRogue81"/>
-
-    <meta name="description" content="shows how to get the CachyOS features of the command shell fish into other GNU/Linux like Fedora 42"/>
-    <title>fish - Sarah's Website</title>
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-    <link rel="manifest" href="/manifest.json"/>
+<meta name="twitter:site" content="@SarahRogue81"/>    <title>Tagged “fish” | Sarah's Website</title>
+    <link href="https://sarah-rogue.me/feed.xml" type="application/atom+xml"
+          rel="alternate" title="Sarah's Website Atom Feed"/>
+    <link rel="icon" href="https://sarah-rogue.me/favicon.ico" sizes="any"/>
+    <link rel="icon" href="https://sarah-rogue.me/favicon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="https://sarah-rogue.me/apple-touch-icon.png"/>
+    <link rel="manifest" href="https://sarah-rogue.me/manifest.json"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"/>
-    <link rel="stylesheet" href="https://sarah-rogue.me/theme/assets/pico-main/css/pico.min.css">
-    <link rel="stylesheet" href="https://sarah-rogue.me/theme/css/main.css">
-<link rel="stylesheet" href="https://sarah-rogue.me/css/styles.css"/></head>
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Lexend:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://sarah-rogue.me/theme/css/base.css"/>
+<link rel="stylesheet" href="https://sarah-rogue.me/theme/css/articles.css"/><link rel="stylesheet" href="https://sarah-rogue.me/theme/css/tag.css"/><link rel="stylesheet" href="https://sarah-rogue.me/css/styles.css"/></head>
 <body>
-<header class="container-fluid sr-theme sr-text-centre">
-    <div class="sr-xxxlarge sr-text-bold">Sarah's Website</div>
+<header class="site-header">
+    <a class="brand" href="https://sarah-rogue.me/">
+<img class="avatar" src="https://sarah-rogue.me/images/avatar.webp" alt="" width="75" height="75"/>        <span class="site-name">Sarah's Website</span>
+    </a>
+
+    <div class="search">
+        <script async src="https://cse.google.com/cse.js?cx=63e67857956e74084">
+        </script>
+        <div class="gcse-search"></div>
+    </div>
+
+    <nav class="site-nav" aria-label="Main">
+        <a href="https://sarah-rogue.me/blog/">Blog</a>
+            <a href="https://sarah-rogue.me/about.html">About</a>
+            <a href="https://mastodon.social/@SarahRogue81" rel="me" aria-label="Mastodon">
+                <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+            </a>
+    </nav>
 </header>
 
-<nav class="container-fluid sr-theme-darker">
-    <a href="https://sarah-rogue.me/">
-        <button class="secondary sr-theme-dark">home</button>
-    </a>
-        <a href="https://sarah-rogue.me/categories.html">
-            <button class="secondary sr-theme-dark">categories</button>
-        </a>
-        <a href="https://sarah-rogue.me/tags.html">
-            <button class="secondary sr-theme-dark">tags</button>
-        </a>
-            <a href="https://sarah-rogue.me/pages/about.html">
-                <button class="secondary sr-theme-dark">about</button>
-            </a>
-</nav>
+<div class="site-body">
+    <aside class="sidebar">
+<p class="bio">Sarah blogs about everthing tech and gaming - from Android, ChromeOS, Googlebooks, coding, Windows 11, and Linux to gaming, raising her kids, and more. she is a geeky emo girl who loves to share</p>
+        <details class="follow" open>
+            <summary>
+                <span>Follow Me</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <ul>
+                <li><a href="https://sarah-rogue.me/feed.xml">
+                    <i class="fa-solid fa-rss" aria-hidden="true"></i>Newsfeed</a></li>
+                <li><a href="https://bsky.app/profile/sarah-rogue.me">
+                    <i class="fa-brands fa-bluesky" aria-hidden="true"></i>@Bluesky</a></li>
+                <li><a href="https://github.com/SarahRogue81">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>@GitHub</a></li>
+                <li><a href="https://twitter.com/SarahRogue81">
+                    <i class="fa-brands fa-twitter" aria-hidden="true"></i>@Twitter</a></li>
+            </ul>
+        </details>
+    </aside>
 
-<main class="container-fluid">
-    <article class="sr-panel sr-border">
-    <header class="sr-article-header sr-theme-light sr-padding">
-        <h1>How To Configure Your Fish Prompt <span class="sr-theme-light sr-float-right sr-text-small">
-            <a href="https://sarah-rogue.me/2025/how-to-configure-your-fish-prompt/">permalink</a></span></h1>
-        <div class="sr-right-align sr-text-small">
-            by Sarah Rogue            on 09 August, 2025
-        </div>
-    </header>
-    <div class="sr-margin-top"><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>first of all, i love the command shell <code>fish</code>!!!</p>
+    <main class="main">
+<section class="card">
+    <h1>Tagged “fish”</h1>
+    <ul class="post-list">
+        <li>
+            <a href="https://sarah-rogue.me/blog/how-to-configure-your-fish-prompt/">How To Configure Your Fish Prompt</a>
+            <time datetime="2025-08-09T00:00:00-04:00">9 Aug</time>
+        </li>
+    </ul>
+</section>
+    </main>
 </div>
-<div class="paragraph">
-<p>but</p>
-</div>
-<div class="paragraph">
-<p>i&#8217;m a complete noob when it comes to <code>fish</code> and fishing as well</p>
-</div>
-<div class="paragraph">
-<p>however</p>
-</div>
-<div class="paragraph">
-<p>i love the way <code>fish</code> is setup on <a href="https://cachyos.org/">CashyOS</a> but when i switched to <a href="https://www.fedoraproject.org/">Fedora</a> 42, i missed all of the epic CashyOS features that made <code>fish</code> even better</p>
-</div>
-<div class="paragraph">
-<p>i felt like i had to do something — something like this:</p>
-</div>
-<div class="imageblock article-icon">
-<div class="content">
-<img src="/images/how-to-configure-your-fish-prompt/python-virtual-environment.webp" alt="command prompt that i want for fish">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_simple_solution">the simple solution</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>does&#8217;t work</p>
-</div>
-<div class="paragraph">
-<p>and that would be transferring my existing <code>~/.config/fish</code> folder to Fedora</p>
-</div>
-<div class="paragraph">
-<p>even transferring the CashyOS config folder doesn&#8217;t work</p>
-</div>
-<div class="paragraph">
-<p>so what did i do?</p>
-</div>
-<div class="paragraph">
-<p>copying and pasting, mainly</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_solution_that_worked">the solution that worked</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>is kinda involved but well worth it imho</p>
-</div>
-<div class="paragraph">
-<p>first, let&#8217;s start with aliases</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_aliases">aliases</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>CachyOS has some good ones but i came up with a few of my own</p>
-</div>
-<div class="paragraph">
-<p>from my <a href="/src/how-to-configure-your-fish-prompt/alias.fish"><code>~/.config/fish/conf.d/alias.fish</code></a> file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code># Replace ls with eza
-alias la 'eza -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll 'eza -l --color=always --group-directories-first --icons'  # long format
-alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listing
-alias l. "eza -a | grep -e '^\.'"                                   # show only dotfiles
-alias lal 'eza -al --color=always --group-directories-first --icons'
-alias ls 'eza --color=always --group-directories-first --icons'
 
-# Common use
-alias psmem 'ps auxf | sort -nr -k 4'
-alias psmem10 'ps auxf | sort -nr -k 4 | head -10'
-alias .. 'cd ..'
-alias ... 'cd ../..'
-alias .... 'cd ../../..'
-alias ..... 'cd ../../../..'
-alias ...... 'cd ../../../../..'
-alias dir 'dir --color=auto'
-alias vdir 'vdir --color=auto'
-alias grep 'grep --color=auto'
-alias fgrep 'fgrep --color=auto'
-alias egrep 'egrep --color=auto'
-alias hw 'hwinfo --short'                                           # Hardware Info
+<footer class="site-footer">
+        Contact me at <a href="mailto:emo-girl@sarah-rogue.me">emo-girl@sarah-rogue.me</a>
+</footer>
 
-# Get the error messages from journalctl
-alias jctl "journalctl -p 3 -xb"
-
-# root commands
-alias dnf 'sudo dnf5'
-alias reboot 'sudo reboot'
-alias shutdown 'sudo systemctl poweroff'
-alias systemctl 'sudo systemctl'
-alias update 'sudo dnf5 --refresh update'
-alias yum 'sudo dnf5'
-
-# use vim
-alias vi vim
-# don't use the bash version of which
-alias which 'type -P'</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>WARNING</strong>: be sure you have <code>eza</code> installed as it isn&#8217;t, by default, on Fedora 42. if you don&#8217;t, your <code>ls</code> command will quit working due to the alias</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>sudo dnf install eza</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>finally, let&#8217;s move onto the epic CachyOS <code>fish</code> prompt</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_main_prompt">main prompt</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>this one had me racking my small, tiny brain</p>
-</div>
-<div class="paragraph">
-<p>but</p>
-</div>
-<div class="paragraph">
-<p>i finally figured it out</p>
-</div>
-<div class="paragraph">
-<p>the <a href="/src/how-to-configure-your-fish-prompt/fish_prompt.fish"><code>funced fish_prompt</code></a> command lets you edit your prompt</p>
-</div>
-<div class="paragraph">
-<p>down at the very bottom of the file, i changed it to:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>if set -q VIRTUAL_ENV
-    set -f venv_name (basename "$VIRTUAL_ENV")" "
-else
-    set -f venv_name ""
-end
-
-echo -s \n (set_color red) (prompt_pwd -d 70) (set_color brblack) (echo (fish_vcs_prompt) | sed 's/[()]//g')
-echo -n -s $venv_name $normal $suffix " "</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>what i learned is that <code>set -q</code> queries to see if the variable is set or unset</p>
-</div>
-<div class="paragraph">
-<p>and</p>
-</div>
-<div class="paragraph">
-<p><code>set -f</code> sets the variable for the scope of the function</p>
-</div>
-<div class="paragraph">
-<p>also, in order to get the virtual environment part to work</p>
-</div>
-<div class="paragraph">
-<p>you need to add the following line to your <a href="/src/how-to-configure-your-fish-prompt/environ.fish"><code>~/.config/fish/conf.d/environ.fish</code></a> file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>set -gx VIRTUAL_ENV_DISABLE_PROMPT true</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_conclusion">conclusion</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>i learned a lot about <code>fish</code> and got a bunch of epic aliases for my Fedora 42 OS</p>
-</div>
-<div class="paragraph">
-<p>you can also <a href="/src/how-to-configure-your-fish-prompt/fish-config.tar.xz">download</a> my <code>fish</code> configuration which has everything done for you</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>&gt; ~/.config/
-&gt; rm -rf fish    # unless you've already made changes
-&gt; tar Jxvf ~/Downloads/fish-config.tar.xz</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>thank you for reading and have a fun day!!!</p>
-</div>
-</div>
-</div></div>
-    </article>
-</main>
-
-    <!-- Navigation arrows -->
-    <nav class="container-fluid sr-text-centre">
-        <div role="group" class="paginator">
-            <!-- First page -->
-                <span role="button" class="secondary" disabled><i class="fa-solid fa-angles-left"></i></span>
-
-            <!-- Previous page -->
-                <span role="button" class="secondary" disabled><i class="fa-solid fa-angle-left"></i></span>
-
-            <!-- Page indicator -->
-            <span role="button"
-                  class="paginator-indicator sr-theme-light">1 of 1
-            </span>
-
-            <!-- Next page -->
-                <span role="button" class="secondary" disabled><i class="fa-solid fa-angle-right"></i></span>
-
-            <!-- Last page -->
-                <span role="button" class="secondary" disabled><i class="fa-solid fa-angles-right"></i></span>
-        </div>
-    </nav>
-
-
-<footer class="container-fluid sr-theme-light sr-text-centre">
-    copyright 2026 Sarah Rogue
-    <br/>
-        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Attribution-NonCommercial-NoDerivatives 4.0 International</a>
-        license
-    <br/>
-        powered by <a href="https://picocss.com/">Pico CSS</a> and <a href="https://www.cloudflare.com/">Cloudflare</a></footer>
-
-<script src="https://kit.fontawesome.com/9208356911.js" crossorigin="anonymous"></script>
-</body>
+<script src="https://kit.fontawesome.com/9208356911.js" crossorigin="anonymous"></script></body>
 </html>

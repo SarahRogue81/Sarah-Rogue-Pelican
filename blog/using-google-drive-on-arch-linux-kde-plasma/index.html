@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="color-scheme" content="dark"/>
+    <meta name="robots" content="index, follow"/>
+<meta name="twitter:site" content="@SarahRogue81"/>    <title>Using Google Drive on Arch Linux - KDE Plasma | Sarah's Website</title>
+    <link href="https://sarah-rogue.me/feed.xml" type="application/atom+xml"
+          rel="alternate" title="Sarah's Website Atom Feed"/>
+    <link rel="icon" href="https://sarah-rogue.me/favicon.ico" sizes="any"/>
+    <link rel="icon" href="https://sarah-rogue.me/favicon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="https://sarah-rogue.me/apple-touch-icon.png"/>
+    <link rel="manifest" href="https://sarah-rogue.me/manifest.json"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Lexend:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://sarah-rogue.me/theme/css/base.css"/>
+<link rel="stylesheet" href="https://sarah-rogue.me/theme/css/article.css"/><link rel="stylesheet" href="https://sarah-rogue.me/css/styles.css"/></head>
+<body>
+<header class="site-header">
+    <a class="brand" href="https://sarah-rogue.me/">
+<img class="avatar" src="https://sarah-rogue.me/images/avatar.webp" alt="" width="75" height="75"/>        <span class="site-name">Sarah's Website</span>
+    </a>
+
+    <div class="search">
+        <script async src="https://cse.google.com/cse.js?cx=63e67857956e74084">
+        </script>
+        <div class="gcse-search"></div>
+    </div>
+
+    <nav class="site-nav" aria-label="Main">
+        <a href="https://sarah-rogue.me/blog/">Blog</a>
+            <a href="https://sarah-rogue.me/about.html">About</a>
+            <a href="https://mastodon.social/@SarahRogue81" rel="me" aria-label="Mastodon">
+                <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+            </a>
+    </nav>
+</header>
+
+<div class="site-body">
+    <aside class="sidebar">
+<p class="bio">Sarah blogs about everthing tech and gaming - from Android, ChromeOS, Googlebooks, coding, Windows 11, and Linux to gaming, raising her kids, and more. she is a geeky emo girl who loves to share</p>
+        <details class="follow" open>
+            <summary>
+                <span>Follow Me</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <ul>
+                <li><a href="https://sarah-rogue.me/feed.xml">
+                    <i class="fa-solid fa-rss" aria-hidden="true"></i>Newsfeed</a></li>
+                <li><a href="https://bsky.app/profile/sarah-rogue.me">
+                    <i class="fa-brands fa-bluesky" aria-hidden="true"></i>@Bluesky</a></li>
+                <li><a href="https://github.com/SarahRogue81">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>@GitHub</a></li>
+                <li><a href="https://twitter.com/SarahRogue81">
+                    <i class="fa-brands fa-twitter" aria-hidden="true"></i>@Twitter</a></li>
+            </ul>
+        </details>
+    </aside>
+
+    <main class="main">
+<article class="card">
+    <h1>Using Google Drive on Arch Linux - KDE Plasma</h1>
+    <div class="prose"><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>NOTE</strong>: i&#8217;ve been told that problems exist with KDE, in general - not just KDE Plasma. so, if you&#8217;re having trouble getting Google Drive to work with Dolphin, these steps may just work anyway</p>
+</div>
+<div class="paragraph">
+<p>also</p>
+</div>
+<div class="paragraph">
+<p>i got this info from <a href="https://reddit.com/r/kde/">Reddit</a> but can&#8217;t find the links - sorry about that</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_initial_steps">initial steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>first, install kio-gdrive</p>
+</div>
+<div class="paragraph">
+<p>the following command is to install kio-gdrive on Arch Linux. i use CachyOS in particular but any <code>pacman</code> OS works</p>
+</div>
+<div class="paragraph">
+<p>obviously, you can install kio-gdrive on other GNU/Linux operating systems</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-fish" data-lang="fish">sudo pacman -S kio-gdrive</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the problem is that simply installing kio-gdrive doesn&#8217;t work at all with KDE</p>
+</div>
+<div class="paragraph">
+<p>however</p>
+</div>
+<div class="paragraph">
+<p>it works just fine with GNOME</p>
+</div>
+<div class="paragraph">
+<p>so, before you go to System Settings, Networking, Oneline Accounts, and add Google</p>
+</div>
+<div class="paragraph">
+<p>do this first:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-fish" data-lang="fish">kate /usr/share/accounts/providers/kde/google.provider</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>delete all the contents (every line) and copy and paste this XML doc instead:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;provider id="google"&gt;
+  &lt;name&gt;Google&lt;/name&gt;
+
+  &lt;description&gt;GNOME-ID, Google Drive and YouTube&lt;/description&gt;
+  &lt;icon&gt;im-google&lt;/icon&gt;
+  &lt;translations&gt;kaccounts-providers&lt;/translations&gt;
+  &lt;domains&gt;.*google\.com&lt;/domains&gt;
+
+  &lt;template&gt;
+    &lt;group name="auth"&gt;
+      &lt;setting name="method"&gt;oauth2&lt;/setting&gt;
+      &lt;setting name="mechanism"&gt;web_server&lt;/setting&gt;
+      &lt;group name="oauth2"&gt;
+        &lt;group name="web_server"&gt;
+          &lt;setting name="Host"&gt;accounts.google.com&lt;/setting&gt;
+          &lt;setting name="AuthPath"&gt;o/oauth2/auth?access_type=offline&amp;amp;approval_prompt=force&lt;/setting&gt;
+          &lt;setting name="TokenPath"&gt;o/oauth2/token&lt;/setting&gt;
+          &lt;setting name="RedirectUri"&gt;http://localhost/oauth2callback&lt;/setting&gt;
+
+          &lt;setting name="ResponseType"&gt;code&lt;/setting&gt;
+          &lt;setting type="as" name="Scope"&gt;[
+              'https://www.googleapis.com/auth/userinfo.email',
+              'https://www.googleapis.com/auth/userinfo.profile',
+              'https://www.googleapis.com/auth/calendar',
+              'https://www.googleapis.com/auth/tasks',
+              'https://www.googleapis.com/auth/drive'
+          ]&lt;/setting&gt;
+          &lt;setting type="as" name="AllowedSchemes"&gt;['https']&lt;/setting&gt;
+          &lt;setting name="ClientId"&gt;44438659992-7kgjeitenc16ssihbtdjbgguch7ju55s.apps.googleusercontent.com&lt;/setting&gt;
+          &lt;setting name="ClientSecret"&gt;-gMLuQyDiI0XrQS_vx_mhuYF&lt;/setting&gt;
+          &lt;setting type="b" name="ForceClientAuthViaRequestBody"&gt;true&lt;/setting&gt;
+        &lt;/group&gt;
+      &lt;/group&gt;
+    &lt;/group&gt;
+  &lt;/template&gt;
+&lt;/provider&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>of course, be sure and save the file - it will prompt you for your <code>sudo</code> password and save the file just fine</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_next_steps">next steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>now, go into <strong>System Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>under the <strong>Networking</strong> section on the left</p>
+</div>
+<div class="paragraph">
+<p>select <strong>Online Accounts</strong></p>
+</div>
+<div class="paragraph">
+<p>on the upper, right, click <strong>+ Add Account</strong> and choose <strong>Google</strong></p>
+</div>
+<div class="paragraph">
+<p>it should look like</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/using-google-drive-on-archlinux-kde-plasma/Online-Accounts-Google-Login.webp" alt="Gmail login for GNOME" width="not KDE">
+</div>
+</div>
+<div class="paragraph">
+<p>notice it says GNOME and not KDE</p>
+</div>
+<div class="paragraph">
+<p>enter your Gmail account address and password on the next screens. i use Passkeys, so it&#8217;s a bit different for me, but still works</p>
+</div>
+<div class="paragraph">
+<p>once you&#8217;re logged in and given GNOME all the settings, Dolphin will just work, as-is</p>
+</div>
+<div class="paragraph">
+<p>in Network, Google Drive, of course</p>
+</div>
+<div class="paragraph">
+<p>and, obviously, you can pin it as well</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>yes, it&#8217;s a bit of work - but very doable</p>
+</div>
+<div class="paragraph">
+<p>the file, above, is also available for you to just download and use as is - it&#8217;s exactly the same as above</p>
+</div>
+<div class="paragraph">
+<p><strong>File</strong>: <a href="/src/using-google-drive-on-archlinux-kde-plasma/google.provider"><code>google.provider</code></a></p>
+</div>
+<div class="paragraph">
+<p><strong><code>md5sum</code></strong>: <code>a65ed15fb05cb710409434d5f6b87171</code></p>
+</div>
+</div>
+</div></div>
+    <footer class="card-meta">
+    <div class="card-meta-lines">
+        <span><i class="fa-solid fa-calendar" aria-hidden="true"></i><time datetime="2025-09-25T00:00:00-04:00">25 September 2025</time></span>
+        <span><i class="fa-solid fa-user-pen" aria-hidden="true"></i>by <a href="https://sarah-rogue.me/author/sarah-rogue.html">Sarah Rogue</a></span>
+        <span><i class="fa-solid fa-paperclip" aria-hidden="true"></i><a href="https://sarah-rogue.me/category/gnulinux.html">GNU/Linux</a></span>
+        <span><i class="fa-solid fa-tags" aria-hidden="true"></i><a href="https://sarah-rogue.me/tag/cachyos.html">#CachyOS</a>, <a href="https://sarah-rogue.me/tag/archlinux.html">#Archlinux</a>, <a href="https://sarah-rogue.me/tag/kde-plasma.html">#KDE Plasma</a>, <a href="https://sarah-rogue.me/tag/dolphin.html">#Dolphin</a></span>
+    </div>
+    <i class="fa-solid fa-newspaper card-meta-icon" aria-hidden="true"></i>
+</footer>
+
+</article>
+    </main>
+</div>
+
+<footer class="site-footer">
+        Contact me at <a href="mailto:emo-girl@sarah-rogue.me">emo-girl@sarah-rogue.me</a>
+</footer>
+
+<script src="https://kit.fontawesome.com/9208356911.js" crossorigin="anonymous"></script></body>
+</html>

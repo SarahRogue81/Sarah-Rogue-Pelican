@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="color-scheme" content="dark"/>
+    <meta name="robots" content="index, follow"/>
+<meta name="twitter:site" content="@SarahRogue81"/>    <title>WinBoat for GNU/Linux | Sarah's Website</title>
+    <link href="https://sarah-rogue.me/feed.xml" type="application/atom+xml"
+          rel="alternate" title="Sarah's Website Atom Feed"/>
+    <link rel="icon" href="https://sarah-rogue.me/favicon.ico" sizes="any"/>
+    <link rel="icon" href="https://sarah-rogue.me/favicon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="https://sarah-rogue.me/apple-touch-icon.png"/>
+    <link rel="manifest" href="https://sarah-rogue.me/manifest.json"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Lexend:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://sarah-rogue.me/theme/css/base.css"/>
+<link rel="stylesheet" href="https://sarah-rogue.me/theme/css/article.css"/><link rel="stylesheet" href="https://sarah-rogue.me/css/styles.css"/></head>
+<body>
+<header class="site-header">
+    <a class="brand" href="https://sarah-rogue.me/">
+<img class="avatar" src="https://sarah-rogue.me/images/avatar.webp" alt="" width="75" height="75"/>        <span class="site-name">Sarah's Website</span>
+    </a>
+
+    <div class="search">
+        <script async src="https://cse.google.com/cse.js?cx=63e67857956e74084">
+        </script>
+        <div class="gcse-search"></div>
+    </div>
+
+    <nav class="site-nav" aria-label="Main">
+        <a href="https://sarah-rogue.me/blog/">Blog</a>
+            <a href="https://sarah-rogue.me/about.html">About</a>
+            <a href="https://mastodon.social/@SarahRogue81" rel="me" aria-label="Mastodon">
+                <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+            </a>
+    </nav>
+</header>
+
+<div class="site-body">
+    <aside class="sidebar">
+<p class="bio">Sarah blogs about everthing tech and gaming - from Android, ChromeOS, Googlebooks, coding, Windows 11, and Linux to gaming, raising her kids, and more. she is a geeky emo girl who loves to share</p>
+        <details class="follow" open>
+            <summary>
+                <span>Follow Me</span>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </summary>
+            <ul>
+                <li><a href="https://sarah-rogue.me/feed.xml">
+                    <i class="fa-solid fa-rss" aria-hidden="true"></i>Newsfeed</a></li>
+                <li><a href="https://bsky.app/profile/sarah-rogue.me">
+                    <i class="fa-brands fa-bluesky" aria-hidden="true"></i>@Bluesky</a></li>
+                <li><a href="https://github.com/SarahRogue81">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>@GitHub</a></li>
+                <li><a href="https://twitter.com/SarahRogue81">
+                    <i class="fa-brands fa-twitter" aria-hidden="true"></i>@Twitter</a></li>
+            </ul>
+        </details>
+    </aside>
+
+    <main class="main">
+<article class="card">
+    <h1>WinBoat for GNU/Linux</h1>
+    <div class="prose"><div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.winboat.app/">WinBoat</a> is a GNU/Linux app that runs various versions of Windows. i fucked up the first time installing it and had a bitch of a time uninstalling it</p>
+</div>
+<div class="paragraph">
+<p>but first</p>
+</div>
+<div class="paragraph">
+<p>i&#8217;ll describe how i got it running before the install</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_initial_install_before_i_fucked_it_up">initial install, before i fucked it up</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WinBoat&#8217;s GitHub <a href="https://github.com/TibixDev/winboat">repo</a> has the <a href="https://github.com/TibixDev/winboat/releases">current release</a> as an AppImage</p>
+</div>
+<div class="paragraph">
+<p>after the download, go to the download folder on the command line and execute</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>chmod +x winboat-X.Y.Z.AppImage</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where X, Y, and Z are the version number. in my case, v0.7.1. <strong>note</strong>: this is beta software and earlier today, it was v0.6.13 but changed rn when i just now checked for this writing</p>
+</div>
+<div class="sect2">
+<h3 id="_before_first_run">before first run</h3>
+<div class="paragraph">
+<p>install Docker and Docker Compose</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo pacman -S docker docker-compose
+
+sudo systemctl enable docker
+sudo systemctl start docker
+
+sudo usermod -a -G docker username</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to start, i use CachyOS, an ArchLinux distro. the first line will probably be different for your distro. the <code>username</code> at the end is your user name that you use to login to your Desktop Environment</p>
+</div>
+<div class="paragraph">
+<p>finally, be sure the correct Kernel Modules are running</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>echo -e "ip_tables\niptable_nat" | sudo tee /etc/modules-load.d/iptables.conf
+sudo reboot</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_appimagelaucher">AppImageLaucher</h3>
+<div class="paragraph">
+<p>believe it or not, i&#8217;d rather not use the terminal for launching apps and i have an <code>apps</code> folder to prove it. so i use AppImageLauncher. to install</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo pacman -S appimagelauncher</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_then_i_fucked_it_all_up">then i fucked it all up</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>when you first run WinBoat, from terminal or otherwise, it displays some sort of BIOS or UEFI. i skipped the FreeRDP step of the pre-installation, which is required for a Remote Desktop Connection. i saw the text and the logo but it went by so fast that i couldn&#8217;t read it. by the time i went back to GitHub to read the README, i was convinced that, somehow, me not installing FreeRDP caused that text to display</p>
+</div>
+<div class="paragraph">
+<p>by that time, the Windows 11 installer was in the middle of downloading and i closed WinBoat thinking that the next time i opened it, it would start over</p>
+</div>
+<div class="paragraph">
+<p>but</p>
+</div>
+<div class="paragraph">
+<p>it did not start over</p>
+</div>
+<div class="paragraph">
+<p>it ran the WinBoat again and, of course, nothing happened</p>
+</div>
+<div class="sect2">
+<h3 id="_so_to_uninstall_the_docker_image">so, to uninstall the docker image</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>sudo docker volume rm winboat
+sudo rm -rf /var/lib/docker/volumes</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>that last line might be unnecessary but i did it anyway (thx Gemini deep research)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_and_so_i_started_over">and so i started over</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WinBoat uses QEMU from your default web browser and, below are some pics of the installation and what i did after</p>
+</div>
+<div class="sect2">
+<h3 id="_pics">pics</h3>
+<div class="paragraph">
+<p>WinBoat lets you install a number of Windows versions, i picked 11 Pro</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/winboat-for-gnu-linux/01-winboat-windows-11-download.webp" alt="Windows 11 downloading">
+</div>
+</div>
+<div class="paragraph">
+<p>then the install begins</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/winboat-for-gnu-linux/02-winboat-installing-windows-11.webp" alt="Windows 11 installing">
+</div>
+</div>
+<div class="paragraph">
+<p>after some restarts, Windows opens with you already logged in</p>
+</div>
+<div class="paragraph">
+<p>sorry that i didn&#8217;t mention it before</p>
+</div>
+<div class="paragraph">
+<p>but</p>
+</div>
+<div class="paragraph">
+<p>WinBoat, before it creates the Docker image, prompts for RAM, Cores, and Storage Size</p>
+</div>
+<div class="paragraph">
+<p>i picked 8 GB, 4, and 64 GB respectively</p>
+</div>
+<div class="paragraph">
+<p>it also asks for which version of Windows you want and a password to login - this can be anything as it doesn&#8217;t link to your Microsoft Account</p>
+</div>
+<div class="paragraph">
+<p>the next thing i did was a Windows Update</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/winboat-for-gnu-linux/03-winboat-windows-update.webp" alt="Windows Update in grogress">
+</div>
+</div>
+<div class="paragraph">
+<p>and also updated the apps in the Microsoft Store</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/winboat-for-gnu-linux/04-winboat-microsoft-store-updates.webp" alt="Microsoft Store apps updating">
+</div>
+</div>
+<div class="paragraph">
+<p>the apps all got updated first and then Windows Update finished and prompted for a reboot, which i did</p>
+</div>
+<div class="paragraph">
+<p>i had to log in, with password, and was greeted with this minimal desktop and start menu</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/winboat-for-gnu-linux/05-winboat-windows-11-desktop.webp" alt="Windows 11 desktop">
+</div>
+</div>
+<hr>
+<div class="imageblock">
+<div class="content">
+<img src="/images/winboat-for-gnu-linux/06-winboat-windows-11-start-menu.webp" alt="Windows 11 start menu">
+</div>
+</div>
+<div class="paragraph">
+<p>the next Windows update simply installed Defender antivirus signatures, which didn&#8217;t require a reboot</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_caveats">caveats</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>because it is running QEMU in a default web browser, gaming isn&#8217;t an option - save maybe the Microsoft games, like Mahjong, Minesweeper, Jigsaw, etc</p>
+</div>
+<div class="paragraph">
+<p>please use Steam/Proton directly on your GNU/Linux machine for gaming, even simple games</p>
+</div>
+<div class="paragraph">
+<p>updating WinBoat to the current version involves stopping a WinBoat Windows service and deleting 16 lines at the bottom of the <code>~/.local/share/applications/appimagekit_*-winboat.desktop</code> file plus removing the old AppImage in your <code>~/Applications</code> folder</p>
+</div>
+<div class="paragraph">
+<p>no Bluetooth, microphone input, audio output</p>
+</div>
+<div class="paragraph">
+<p>stopping QEMU from within the WinBoat app does a hard power-off, i believe (but i could be wrong). pausing works just fine. a shutdown within the Windows QEMU environment is the correct way</p>
+</div>
+<div class="paragraph">
+<p>it&#8217;s constantly prompting me to stop the WinBoatGuestServer</p>
+</div>
+<div class="paragraph">
+<p>the Windows 11 Pro install, upgrades and app updates consume 20.5 GB of storage</p>
+</div>
+<div class="paragraph">
+<p>simply moving the cursor isn&#8217;t smooth</p>
+</div>
+<div class="paragraph">
+<p>but</p>
+</div>
+<div class="paragraph">
+<p>it gets the job done</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_last_words">last words</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>this project is off to a great start but i doubt i will use it for anything</p>
+</div>
+<div class="paragraph">
+<p>i can run Microsoft 365 in my web browser on GNU/Linux and there&#8217;s an app for everything else i want to do</p>
+</div>
+<div class="paragraph">
+<p>i&#8217;ve tested running games on CachyOS and the fps is the same as on my native Windows 11 partition</p>
+</div>
+<div class="paragraph">
+<p>so, i really have no need for Windows. sorry, Microsoft</p>
+</div>
+<div class="paragraph">
+<p>but this project is awesome, a fave, and <strong>the</strong> tech talk on <a href="https://discord.com/">Discord</a></p>
+</div>
+<div class="paragraph">
+<p>hope this information helps</p>
+</div>
+</div>
+</div></div>
+    <footer class="card-meta">
+    <div class="card-meta-lines">
+        <span><i class="fa-solid fa-calendar" aria-hidden="true"></i><time datetime="2025-09-04T00:00:00-04:00">4 September 2025</time></span>
+        <span><i class="fa-solid fa-user-pen" aria-hidden="true"></i>by <a href="https://sarah-rogue.me/author/sarah-rogue.html">Sarah Rogue</a></span>
+        <span><i class="fa-solid fa-paperclip" aria-hidden="true"></i><a href="https://sarah-rogue.me/category/gnulinux.html">GNU/Linux</a></span>
+        <span><i class="fa-solid fa-tags" aria-hidden="true"></i><a href="https://sarah-rogue.me/tag/winboat.html">#WinBoat</a>, <a href="https://sarah-rogue.me/tag/windows.html">#Windows</a></span>
+    </div>
+    <i class="fa-solid fa-newspaper card-meta-icon" aria-hidden="true"></i>
+</footer>
+
+</article>
+    </main>
+</div>
+
+<footer class="site-footer">
+        Contact me at <a href="mailto:emo-girl@sarah-rogue.me">emo-girl@sarah-rogue.me</a>
+</footer>
+
+<script src="https://kit.fontawesome.com/9208356911.js" crossorigin="anonymous"></script></body>
+</html>

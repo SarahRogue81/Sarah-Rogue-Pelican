@@ -1,0 +1,18 @@
+/* blog list: one card, post titles on the left, dates on the right */
+.post-list { list-style: none; margin: 0; padding: 0; }
+
+.post-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 6px 0;
+}
+
+.post-list a { font-weight: 600; }
+
+.post-list time {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
