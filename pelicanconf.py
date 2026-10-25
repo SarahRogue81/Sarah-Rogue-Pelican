@@ -41,11 +41,11 @@ HOSTING_PROVIDER_URL = 'https://www.cloudflare.com/'
 LICENSE = 'Attribution-NonCommercial-NoDerivatives 4.0 International'
 LICENSE_URL = 'https://creativecommons.org/licenses/by-nc-nd/4.0/'
 OVERRIDE_CSS = 'styles.css'
-PLUGIN_PATHS = ['replit']
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['asciidoc_reader', 'sitemap']
 STATIC_PATHS = ['images', 'src', 'robots.txt', 'css']
 SUMMARY_MAX_PARAGRAPHS = 1
-THEME = 'replit/WhatsTheScoop'
+THEME = 'themes/WhatsTheScoop'
 TWITTER_USERNAME = os.getenv('TWITTER_USERNAME')
 USE_FOLDER_AS_CATEGORY = False
 
