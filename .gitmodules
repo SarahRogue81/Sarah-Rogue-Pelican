@@ -7,3 +7,6 @@
 [submodule "replit/asciidoc_reader"]
 	path = replit/asciidoc_reader
 	url = git@github.com:SarahRogue81/asciidoc_reader.git
+[submodule "replit/will_i_am"]
+	path = replit/will_i_am
+	url = git@github.com:SarahRogue81/will_i_am.git
