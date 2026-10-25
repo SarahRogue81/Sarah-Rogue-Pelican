@@ -3,6 +3,7 @@
 :title: about me
 :author: Sarah Rogue
 :date: Sat, 11 Jul 2026 23:57:29 -0400
+:display_as: About
 
 hey there, i'm **Sarah Rogue**! welcome to my little corner of the web. i'm a geeky emo🖤 girl who spends way too much time staring at screens, tweaking terminal prompts, and breaking (then fixing) operating systems
 

@@ -9,6 +9,7 @@ load_dotenv()  # This loads variables from .env into os.environ
 AUTHOR = 'Sarah Rogue'
 AUTHOR_BIO = 'Sarah blogs about everthing tech and gaming - from Android, ChromeOS, Googlebooks, coding, Windows 11, and Linux to gaming, raising her kids, and more. she is a geeky emo girl who loves to share'
 AUTHOR_EMAIL = os.getenv('AUTHOR_EMAIL')
+AVATAR = 'images/avatar.webp'
 SITENAME = 'Sarah\'s Website'
 
 PATH = 'content'
@@ -60,6 +61,10 @@ STATIC_PATHS = ['images', 'src', 'robots.txt', 'css']
 # SUMMARY_MAX_PARAGRAPHS = 1
 THEME = 'themes/will_i_am'
 TWITTER_USERNAME = os.getenv('TWITTER_USERNAME')
+# social links (sidebar "Follow Me" and header); leave unset in .env to hide
+BLUESKY_HANDLE = os.getenv('BLUESKY_HANDLE')
+GITHUB_USERNAME = os.getenv('GITHUB_USERNAME')
+MASTODON_URL = os.getenv('MASTODON_URL')
 USE_FOLDER_AS_CATEGORY = False
 
 # for sitemap plugin
