@@ -20,6 +20,8 @@ DEFAULT_LANG = 'en-GB'
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+TRANSLATION_FEED_ATOM = None  # default would write docs/feeds/all-{lang}.atom.xml
 
 # DEFAULT_PAGINATION = 1
 
